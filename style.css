@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #ffd6e7, transparent 40%),
+        radial-gradient(circle at bottom right, #e7d5ff, transparent 40%),
+        #fff5f9;
+
+    color: #4a3040;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* ================= SCREEN ================= */
+
+.screen {
+    min-height: 100vh;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    position: relative;
+}
+
+
+.screen.active {
+    display: flex;
+
+    animation: fadeIn 1s ease;
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome-card {
+
+    width: min(600px, 95%);
+
+    text-align: center;
+
+    padding: 55px 35px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px rgba(150, 70, 110, 0.15);
+
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+
+.cake {
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+    animation: floating 2.5s ease-in-out infinite;
+}
+
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+.small-text {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    color: #a16a87;
+
+    margin-bottom: 15px;
+}
+
+
+h1,
+h2 {
+    font-family: 'Dancing Script', cursive;
+}
+
+
+.welcome-card h1 {
+
+    font-size: clamp(45px, 8vw, 75px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+.welcome-card h1 span {
+    display: block;
+
+    color: #e85d91;
+}
+
+
+.message {
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #765568;
+
+    max-width: 480px;
+
+    margin: auto auto 30px;
+}
+
+
+/* ================= BUTTON ================= */
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family: 'Poppins', sans-serif;
+
+    transition: all 0.3s ease;
+}
+
+
+.welcome-card button,
+.next-btn {
+
+    background: linear-gradient(
+        135deg,
+        #ef6fa3,
+        #c96fe9
+    );
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 10px 25px rgba(215, 90, 150, 0.3);
+}
+
+
+button:hover {
+
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow:
+        0 15px 30px rgba(200, 80, 140, 0.3);
+}
+
+
+/* ================= MEMORIES ================= */
+
+.memory-container {
+
+    width: min(600px, 95%);
+
+    text-align: center;
+}
+
+
+.memory-container h2 {
+
+    font-size: clamp(45px, 8vw, 65px);
+
+    color: #d9578a;
+
+    margin-bottom: 25px;
+}
+
+
+.photo-card {
+
+    background: white;
+
+    padding: 12px 12px 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 20px 50px rgba(100, 40, 80, 0.2);
+
+    transform: rotate(-1deg);
+
+    transition: 0.5s;
+
+    margin-bottom: 25px;
+}
+
+
+.photo-card:hover {
+
+    transform: rotate(0deg) scale(1.01);
+}
+
+
+.photo-card img {
+
+    width: 100%;
+
+    max-height: 65vh;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+.photo-caption {
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 24px;
+
+    color: #765568;
+
+    margin-top: 15px;
+}
+
+
+/* ================= DOTS ================= */
+
+.dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+.dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    background: #e6b6ca;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+
+.dot.active {
+
+    width: 25px;
+
+    border-radius: 20px;
+
+    background: #e85d91;
+}
+
+
+/* ================= MEMORY BUTTONS ================= */
+
+.memory-buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.skip-btn {
+
+    background: transparent;
+
+    color: #a45d7d;
+
+    font-size: 14px;
+
+    text-decoration: underline;
+}
+
+
+/* ================= PROPOSAL ================= */
+
+.proposal-card {
+
+    width: min(650px, 95%);
+
+    text-align: center;
+
+    padding: 50px 30px;
+
+    background: rgba(255,255,255,0.8);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px rgba(150,70,110,0.15);
+}
+
+
+.big-heart {
+
+    font-size: 80px;
+
+    animation: heartbeat 1.3s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+.proposal-card h2 {
+
+    font-size: 42px;
+
+    color: #c95783;
+
+    margin: 15px 0;
+}
+
+
+.proposal-text {
+
+    line-height: 1.8;
+
+    color: #765568;
+
+    max-width: 500px;
+
+    margin: 20px auto;
+}
+
+
+.question {
+
+    font-size: clamp(40px, 8vw, 65px);
+
+    color: #e85d91;
+
+    margin: 25px 0;
+}
+
+
+.answer-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.yes-btn {
+
+    background: linear-gradient(
+        135deg,
+        #ed6798,
+        #d16be7
+    );
+
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+}
+
+
+/* ================= YES SCREEN ================= */
+
+.yes-card {
+
+    width: min(650px, 95%);
+
+    text-align: center;
+
+    padding: 50px 30px;
+
+    background: rgba(255,255,255,0.8);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px rgba(150,70,110,0.15);
+}
+
+
+.celebration {
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+
+.yes-card h1 {
+
+    font-size: clamp(40px, 8vw, 65px);
+
+    color: #e85d91;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+
+.yes-card p {
+
+    font-size: 18px;
+
+    color: #765568;
+}
+
+
+.love-message {
+
+    margin: 25px auto;
+
+    line-height: 1.8;
+
+    color: #765568;
+}
+
+
+.hearts-big {
+
+    font-size: 30px;
+
+    margin-top: 25px;
+
+    animation: floating 2s infinite;
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+.hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+
+.heart {
+
+    position: absolute;
+
+    bottom: -30px;
+
+    font-size: 20px;
+
+    opacity: 0.7;
+
+    animation: floatHeart linear forwards;
+}
+
+
+@keyframes floatHeart {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .welcome-card,
+    .proposal-card,
+    .yes-card {
+
+        padding: 40px 20px;
+
+    }
+
+    .message {
+
+        font-size: 14px;
+
+    }
+
+    .photo-caption {
+
+        font-size: 21px;
+
+    }
+
+    .proposal-card h2 {
+
+        font-size: 35px;
+
+    }
+
+}

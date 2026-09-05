@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Jahan ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="hearts"></div>
+
+
+    <!-- ================= OPENING ================= -->
+
+    <section id="welcome" class="screen active">
+
+        <div class="welcome-card">
+
+            <div class="cake">🎂</div>
+
+            <p class="small-text">A little something for you...</p>
+
+            <h1>
+                Happy Birthday,
+                <span>Jahan ❤️</span>
+            </h1>
+
+            <p class="message">
+                Today is a little more special,
+                simply because someone as special as you
+                was born. 🌸
+            </p>
+
+            <button onclick="showMemories()">
+                Open Your Surprise 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= MEMORIES ================= -->
+
+    <section id="memories" class="screen">
+
+        <div class="memory-container">
+
+            <p class="small-text">Some little moments...</p>
+
+            <h2>Our Memories 📸</h2>
+
+            <div class="photo-card">
+
+                <img id="memoryImage" src="images/1.jpg" alt="Our memory">
+
+                <div class="photo-caption" id="caption">
+                    Some moments are too beautiful to forget. ❤️
+                </div>
+
+            </div>
+
+
+            <div class="dots" id="dots"></div>
+
+
+            <div class="memory-buttons">
+
+                <button class="next-btn" onclick="nextPhoto()">
+                    Next Memory 💕
+                </button>
+
+                <button class="skip-btn" onclick="showProposal()">
+                    I have something to ask...
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROPOSAL ================= -->
+
+    <section id="proposal" class="screen">
+
+        <div class="proposal-card">
+
+            <div class="big-heart">❤️</div>
+
+            <p class="small-text">
+                Okay... one last thing.
+            </p>
+
+            <h2>
+                Jahan,
+                <br>
+                I have a question for you...
+            </h2>
+
+            <p class="proposal-text">
+                We've shared some beautiful moments,
+                and honestly, I would love to make
+                many more memories with you.
+            </p>
+
+            <h1 class="question">
+                Will You Be My Jahan? 💗
+            </h1>
+
+            <div class="answer-buttons">
+
+                <button class="yes-btn" onclick="sayYes()">
+                    YES ❤️
+                </button>
+
+                <button class="yes-btn" onclick="sayYes()">
+                    Of Course 🥺
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= YES SCREEN ================= -->
+
+    <section id="yesScreen" class="screen">
+
+        <div class="yes-card">
+
+            <div class="celebration">🎉💗🎉</div>
+
+            <h1>
+                You just made me
+                the happiest person! 🥺❤️
+            </h1>
+
+            <p>
+                Happy Birthday once again, Jahan. 🌸
+            </p>
+
+            <div class="love-message">
+                I hope this is just the beginning
+                of many beautiful memories together. ❤️
+            </div>
+
+            <div class="hearts-big">
+                ❤️ 💕 ❤️ 💕 ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
